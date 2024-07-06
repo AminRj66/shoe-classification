@@ -159,3 +159,8 @@ Implementing design patterns (e.g., Factory, Strategy, Singleton) to address com
 
 •	**Performance optimization:** <br>
 Analyzing and implementing optimizations such as model distillation, and architecture search to improve the speed, memory footprint, and accuracy of the AI model.
+
+ <br>
+ 
+ **Complementary documentation is included in [Technical Report.pdf](https://github.com/AminRj66/shoe-classification/blob/main/report/Technical%20Report.pdf).**
+
