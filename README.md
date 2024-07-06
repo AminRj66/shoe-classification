@@ -9,6 +9,7 @@ The AI system being developed is a shoe classification model trained on a datase
 # 2. Prerequisites
 
 Before running the code, make sure you have the following installed: <br>
+
 tensorflow==2.12.1 <br>
 keras==2.12.0 <br>
 matplotlib==3.7.2 <br>
@@ -41,6 +42,14 @@ This repository is a collection of code that implements a deep learning model ca
 The code allows for the training and testing of the model on a given dataset of shoe images. During training, the model utilizes a two-step process. First, the feature extraction section of the model, which is pretrained, is utilized. This section has been previously trained on a large dataset and is not updated during the training process. This allows the model to benefit from the knowledge learned from a diverse range of images.
 The second step of the training process involves re-training the semantic encoding section of the model. This section consists of a fully connected network at the end of the model. During this step, the model is trained specifically on current images. This allows the model to learn the specific features and characteristics of shoe images, enhancing its ability to accurately classify them.
 
+The implementation covers three CNN based models, including: <br>
+1. End-to-end finetuning MobileNet_v2 classifier
+This model achieves the highest performance among all models, and the results will be plotted based on this architecture from now on.
+
+3. End-to-end finetuning EfficientNetB0 classifier
+
+4. Finetuning separated classifier model
+
 
 ## 5.1. Training the Model
 
@@ -64,23 +73,23 @@ The AI system employs a robust preprocessing pipeline to enhance the quality and
 3.	**Resizing**: The images in the dataset are resized to a standardized format to ensure uniformity in input dimensions across all samples. Resizing facilitates the efficient processing of images by fixing their dimensions to a predefined size, enabling the model to handle inputs of consistent shapes. This step prepares the images for seamless integration into the neural network architecture, streamlining the training process and enhancing the model's ability to learn discriminative features without being constrained by varying image sizes.
 4.	**Rescaling**: Before training, the pixel values of the resized images are scaled to a common range, typically ranging between 0 and 1 or -1 and 1. Scaling standardizes the pixel intensities across images, mitigating discrepancies in pixel values that could hinder the convergence of the model during training. By normalizing the input data, the system ensures that the neural network receives inputs in a consistent and optimized format, facilitating effective learning and improving the model's performance in accurately classifying shoe categories.
 
-
+ <br>
 
 <p align="center">
-  <a href="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/Performance1.png" target="_blank">
-    <img src="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/Performance1.png">
+  <a href="https://github.com/AminRj66/shoe-classification/blob/main/outputs/training_validation_performance.png" target="_blank">
+    <img src="https://github.com/AminRj66/shoe-classification/blob/main/outputs/training_validation_performance.png">
   </a>
 </p>
 
-
+ <br>
 
 ## 5.2. Testing the Model
 
 To test the model, follow these steps:
 
 1. Set up the phase parameter in the `config/config.yml` file for testing model.
-2. Run the `run_image_labeling.py` script.
-3. The script will load the pre-trained model from the specified directory.
+2. The script will load the pre-trained model from the specified directory.
+3. Run the `main.py` script.
 4. The model will be tested on the provided test images.
 5. The predictions will be displayed along with the corresponding image.
 
@@ -89,6 +98,25 @@ To test the model, follow these steps:
 
 When evaluating trained models, we aim to use accuracy, precision, recall, and the F1 score as key metrics to assess their performance. These evaluation metrics provide valuable insights into the effectiveness and accuracy of the trained models in classification tasks. We also use a confusion matrix to evaluate the performance of the classification model.
 
+ <br>
+
+<p align="center">
+  <a href="https://github.com/AminRj66/shoe-classification/blob/main/outputs/confusion_matrix.png" target="_blank">
+    <img src="https://github.com/AminRj66/shoe-classification/blob/main/outputs/confusion_matrix.png">
+  </a>
+</p>
+
+ <br>
+
+  <br>
+
+<p align="center">
+  <a href="https://github.com/AminRj66/shoe-classification/blob/main/outputs/metrics.png" target="_blank">
+    <img src="https://github.com/AminRj66/shoe-classification/blob/main/outputs/metrics.png">
+  </a>
+</p>
+
+ <br>
 
 # 6. Future Improvements
 
