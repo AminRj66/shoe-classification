@@ -44,7 +44,9 @@ The second step of the training process involves re-training the semantic encodi
 
 The implementation covers three CNN based models, including: <br>
 1. **End-to-end finetuning MobileNet_v2 classifier:** <br>
-This model achieves the highest performance among all models, and the results will be plotted based on this architecture from now on.
+
+**This model achieves the highest performance among all models, and the results will be plotted based on this architecture from now on.**
+
  <br>
 
 <p align="center">
