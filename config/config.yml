@@ -1,0 +1,26 @@
+# Experiment parameters
+model_type: "fine_tuned_mobile_net"     # "fine_tuned_mobile_net", "fine_tuned_EfficientNet", "separated_classifier"
+
+phase: "train"     # "train", "test"
+device: "cpu"
+
+# Train and test paths
+train_dir: "data/training"
+test_dir: "data/validation"
+
+# Pre-saved model path and name
+saved_models_dir: "saved_models"
+model_name: "model_1692528793.hdf5"
+
+# Training parameters
+input_size: [224, 224]
+validation_split: 0.2
+epochs: 30
+batch_size: 8
+learning_rate: 0.001
+
+CV_fold: 5
+variance_ratio: 0.9
+svm:
+  C: [0.1, 1, 2]
+  gamma: [0.1, 1, 2]
