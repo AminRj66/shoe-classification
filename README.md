@@ -53,6 +53,7 @@ To train the model, follow these steps:
 5. The model will be trained using the preprocessed images and the specified parameters.
 6. After training, the model will be saved in the specified directory.
 7. The accuracy and loss values for training and validation stages are plotted.
+8. Test process will start in turn and corresponding confusion matrix and evaluation metrics are visualized.
 
 
 ### Data Augmentation:
