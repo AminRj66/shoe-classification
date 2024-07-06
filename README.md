@@ -1,4 +1,4 @@
-# **Shoes Classification**
+# ***Shoes Classification Task***
 
 
 # 1. Description
@@ -43,13 +43,39 @@ The code allows for the training and testing of the model on a given dataset of 
 The second step of the training process involves re-training the semantic encoding section of the model. This section consists of a fully connected network at the end of the model. During this step, the model is trained specifically on current images. This allows the model to learn the specific features and characteristics of shoe images, enhancing its ability to accurately classify them.
 
 The implementation covers three CNN based models, including: <br>
-1. End-to-end finetuning MobileNet_v2 classifier
+1. **End-to-end finetuning MobileNet_v2 classifier:** <br>
 This model achieves the highest performance among all models, and the results will be plotted based on this architecture from now on.
+ <br>
 
-3. End-to-end finetuning EfficientNetB0 classifier
+<p align="center">
+  <a href="https://github.com/AminRj66/shoe-classification/blob/main/outputs/model1_architecture.png" target="_blank">
+    <img src="https://github.com/AminRj66/shoe-classification/blob/main/outputs/model1_architecture.png">
+  </a>
+</p>
 
-4. Finetuning separated classifier model
+ <br>
 
+2. **End-to-end finetuning EfficientNetB0 classifier:** <br>
+ <br>
+
+<p align="center">
+  <a href="https://github.com/AminRj66/shoe-classification/blob/main/outputs/model2_architecture.png" target="_blank">
+    <img src="https://github.com/AminRj66/shoe-classification/blob/main/outputs/model2_architecture.png">
+  </a>
+</p>
+
+ <br>
+
+3. **Finetuning separated classifier model:** <br>
+ <br>
+
+<p align="center">
+  <a href="https://github.com/AminRj66/shoe-classification/blob/main/outputs/model3_architecture.png" target="_blank">
+    <img src="https://github.com/AminRj66/shoe-classification/blob/main/outputs/model3_architecture.png">
+  </a>
+</p>
+
+ <br>
 
 ## 5.1. Training the Model
 
