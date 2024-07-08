@@ -83,7 +83,8 @@ class FineTunedMobileNet:
         self.model = self.__create_model()
         # training the model with a predefined batch size
         early_stop = EarlyStopping(monitor='val_loss', min_delta=0.0001, patience=5, restore_best_weights=True)
-        model_checkpoint = ModelCheckpoint("best_model_" + self.model_type + ".h5", monitor='val_loss',
+        model_checkpoint = ModelCheckpoint(self.save_path + "/best_model_" + self.model_type + ".h5",
+                                           monitor='val_loss',
                                            save_best_only=True, mode='min')
         history_data = self.model.fit(train_images,
                                       steps_per_epoch=train_images.samples // self.batch_size // 2,
