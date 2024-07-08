@@ -168,8 +168,8 @@ class SeparatedClassifier:
             history, accuracy = self.train_model(train_images)
             self.plot_training_performance(history)
 
-            test_images = data_object.create_test_data()
-            self.plot_confusion_metrics(test_images, data_object.class_names)
+            # test_images = data_object.create_test_data()
+            # self.plot_confusion_metrics(test_images, data_object.class_names)
 
         else:
             test_images = data_object.create_test_data()
